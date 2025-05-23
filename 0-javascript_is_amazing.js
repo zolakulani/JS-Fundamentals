@@ -6,5 +6,5 @@
 // You must use console.log(...) to print all output
 // You are not allowed to use var
 
-let command = parseInt(process.argv[2]);
+//let command = parseInt(process.argv[2]);
 console.log('JavaScript is amazing');
