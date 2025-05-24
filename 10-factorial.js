@@ -1,17 +1,13 @@
 #!/usr/bin/node
 
-function factBigInt(num) {
-    if (isNaN(num) || num < 0) {
-        console.log(1);
-    } else {
-        let pro = 1n;
-        for (let i = BigInt(num); i > 1n; i--) {
-            pro *= i;
-        }
-        console.log(pro.toString());
-    }
+#!/usr/bin/node
 
+function factorial(n) {
+  if (isNaN(n) || n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
 }
 
 const num = parseInt(process.argv[2]);
-factBigInt(num);
+console.log(factorial(num));
