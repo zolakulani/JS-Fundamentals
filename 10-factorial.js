@@ -1,17 +1,17 @@
 #!/usr/bin/node
 
-function fact(num) {
-    if (isNaN(num)) {
+function factBigInt(num) {
+    if (isNaN(num) || num < 0) {
         console.log(1);
     } else {
-        let pro = 1;
-        for (let i = num; i > 1; i--) {
+        let pro = 1n;
+        for (let i = BigInt(num); i > 1n; i--) {
             pro *= i;
         }
-        console.log(pro);
+        console.log(pro.toString());
     }
 
 }
 
 const num = parseInt(process.argv[2]);
-fact(num)
+factBigInt(num);
