@@ -8,7 +8,7 @@ if (args[2] === undefined) {
 } else {
 
     // Check if the convection was successful
-    const num = Number(args[2])//parseInt(args[2], 10);
+    const num = parseInt(args[2], 10)//parseInt(args[2], 10);
 
     if (isNaN(num)) {
         console.log(`Not a number`);
